@@ -13,7 +13,7 @@ export default {
   name: 'HomeView',
   methods: {
     getData() {
-      axios.get('/api')
+      axios.get('http://localhost:8080')
       .then((resonse) => {
         console.log(Response)
       })
