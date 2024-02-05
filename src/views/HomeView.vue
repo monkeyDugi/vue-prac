@@ -9,11 +9,18 @@
 <script>
 import axios from 'axios';
 
+const uForm = {no: 1, name: '테스트', email: 'test@email.com', pwd: '1234', gender: true}
+const params = {
+  'params': {no: 1}
+}
+
 export default {
   name: 'HomeView',
   methods: {
     getData() {
-      axios.get('http://localhost:8080')
+      axios
+      // .post('http://localhost:8080/editById', uForm)
+      .delete('http://localhost:8080/delete', params)
       .then((resonse) => {
         console.log(Response)
       })
