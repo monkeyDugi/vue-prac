@@ -20,7 +20,8 @@ export default {
     getData() {
       axios
       // .post('http://localhost:8080/editById', uForm)
-      .delete('http://localhost:8080/delete', params)
+      // .delete('http://localhost:8080/delete', params)
+      .put('http://localhost:8080/save', uForm)
       .then((resonse) => {
         console.log(Response)
       })
