@@ -45,7 +45,7 @@ export default {
 	methods: {
     getData() {
       axios
-      .post('http://localhost:8080/findAll')
+      .post(process.env.VUE_APP_BASEURL + '/findAll')
       .then((resonse) => {
         console.log(resonse)
 		this.result = resonse.data.result
