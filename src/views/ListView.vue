@@ -54,6 +54,9 @@ export default {
     },
 	href(row) {
 		console.log(row)
+		// this.$router.push({name: 'SelectView', params: row})
+		// this.$router.push({name: 'SelectView', query: row})
+		this.$store.commit('setUser', row)
 		this.$router.push({name: 'SelectView'})
 	}
   }
