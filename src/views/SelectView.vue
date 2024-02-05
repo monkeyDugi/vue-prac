@@ -54,7 +54,6 @@ export default {
 		}
 	},
 	created() {
-		console.log(this.$store.state.user)
 		this.result = this.$store.state.user
 	},
 	methods: {
