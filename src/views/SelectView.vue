@@ -31,13 +31,13 @@
 		</form>
 		<div class="d-flex">
 		  <div class="p-2 flex-fill d-grid">
-		  	<a href="/user/editById" class="btn btn-primary">수정</a>
+			<button type="button" class="btn btn-primary" @click="edit">수정</button>
 		  </div>
 		  <div class="p-2 flex-fill d-grid">
-				<a href="/user" class="btn btn-primary">삭제</a>
+			<button type="button" class="btn btn-primary" @click="del">삭제</button>
 		  </div>
 		  <div class="p-2 flex-fill d-grid">
-			<a href="/user" class="btn btn-primary">취소</a>
+			<button type="button" class="btn btn-primary" @click="cancel">취소</button>
 		  </div>
 		</div>
 	</div>
@@ -54,6 +54,13 @@ export default {
 	created() {
 		console.log(this.$store.state.user)
 		this.result = this.$store.state.user
+	},
+	methods: {
+		edit() {},
+		del() {},
+		cancel() {
+			this.$router.push({ name: 'ListView'})
+		}
 	}
 }
 </script>

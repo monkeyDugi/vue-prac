@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import store from '@/store';
 import axios from 'axios';
 
 export default {
@@ -38,6 +39,7 @@ export default {
 		}
 	},
 	created() {
+		console.log(store)
 		this.getData()
 	},
 	methods: {
@@ -56,7 +58,7 @@ export default {
 		console.log(row)
 		// this.$router.push({name: 'SelectView', params: row})
 		// this.$router.push({name: 'SelectView', query: row})
-		this.$store.commit('setUser', row)
+		store.commit('setUser', row)
 		this.$router.push({name: 'SelectView'})
 	}
   }
