@@ -58,7 +58,9 @@ export default {
 		this.result = this.$store.state.user
 	},
 	methods: {
-		edit() {},
+		edit() {
+			this.$router.push({ name: 'UpdateView' })
+		},
 		del() {
 			const params = { params: { no: this.result.no }}
 			axios
