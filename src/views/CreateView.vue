@@ -84,6 +84,7 @@ export default {
 				console.log(res)
 				// this.$store.commit('setUser', res.data.result)
 				store.commit('setUser', res.data.result)
+				sessionStorage.setItem('setUser', JSON.stringify(res.data.result))
 				this.$router.push({ name: 'SelectView' })
 			})
 			.catch((err) => console.log(err))

@@ -24,3 +24,14 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+
+<script>
+export default {
+  created() {
+    const user = sessionStorage.getItem('setUser')
+    if (user) {
+      this.$store.commit('setUser', JSON.parse(user))
+    }
+  }
+}
+</script>

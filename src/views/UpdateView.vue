@@ -61,6 +61,7 @@ export default {
 				console.log(res)
 				if (res.data.state) {
 					this.$store.commit('setUser', this.result)
+					sessionStorage.setItem('setUser', JSON.stringify(this.result))
 					this.cancel()
 				} else {
 					alert(res.data.message)
